@@ -6,3 +6,12 @@ document.getElementById('nav-toggle').addEventListener('click', () => {
         navbar.style.display = 'flex'; 
     }
 });
+// document.getElementById("theme").addEventListener("click", () => {
+//     const button = document.getElementById("theme");
+    
+//     if (button.value === "Light") {
+//         button.value = "Dark"; 
+//     } else {
+//         button.value = "Light"; 
+//     }
+// });

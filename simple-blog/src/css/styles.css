@@ -151,8 +151,8 @@ body {
 }
 
 #main-nav {
+    box-shadow: 0 1rem 1rem #40a0e0;
     border-bottom: solid rgba(0, 0, 0, .2) 1px;
- 
 }
 
 #main-nav>.container {
@@ -228,32 +228,40 @@ article .post-meta .wrap-posted-on {
     display: block;
     margin-bottom: 8px;
 }
-aside{
+
+aside {
     padding-left: 24px;
     padding-top: 32px;
-    border-left: solid rgba(0,0,0,.12) 1px;
+    border-left: solid rgba(0, 0, 0, .12) 1px;
 }
-aside{
-    border-bottom: solid rgba(0,0,0,.12) 1px;
+
+aside {
+    border-bottom: solid rgba(0, 0, 0, .12) 1px;
     padding-bottom: 32px;
     margin-bottom: 32px;
 }
-aside .heading{
+
+aside .heading {
     font-size: 1.25rem;
     color: #205c9a;
     margin-bottom: 16px;
 }
+
 #recent-posts ul {
     list-style: disc;
     padding-left: 32px;
 }
-#recent-posts ul li{
+
+#recent-posts ul li {
     margin-bottom: 16px;
 }
-#recent-posts ul a{
+
+#recent-posts ul a {
     color: inherit;
 }
+
 footer {
+    box-shadow: 0 -1rem 1rem #40a0e0;
     border-top: 1px solid rgba(0, 0, 0, .2);
 }
 
@@ -267,6 +275,12 @@ footer {
 footer a {
     color: inherit;
     margin: 0 4px;
+}
+
+input[type="button"] {
+    width: 100px;
+    border: none;
+    background-color: #fff;
 }
 
 @media screen and (min-width: 1472px) {
@@ -313,7 +327,7 @@ footer a {
         border-bottom: solid rgba(0, 0, 0, .2) 1px;
         left: 0;
         right: 0;
-        top: 77px;
+        top: 85px;
         box-sizing: border-box;
         display: none;
     }
@@ -349,7 +363,7 @@ footer a {
 }
 
 @media screen and (max-width: 768px) {
-    article{
+    article {
         width: 90%;
     }
 }
