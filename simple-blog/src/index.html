@@ -1,11 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>HTML & CSS Learning Workshop Blog</title>
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		
-	</head>
-    <body>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML & CSS Learning Workshop Blog</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<!-- <style>
+    h1 {
+        padding: 1rem;
+        font-size: 38px;
+        font-weight: 800;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 1rem 1.5rem #40a0e0;
+        border-radius: 1rem;
+    }
+
+    p {
+        padding: 1rem;
+        margin: 1rem;
+        text-align: center;
+        color: chocolate;
+        font-size: 20px;
+        box-shadow: 0 1.5rem 1.5rem chocolate;
+        border-radius: 1rem;
+    }
+    #fname{
+        color: gold;
+    }
+    .lname{
+        margin: .5rem;
+        color: #333;
+    }
+</style> -->
+
+<body>
+    <!-- <h1><span id="fname">Sujan</span> <span class="lname">Kumar K</span></h1>
+    <p>Hello! I'm Sujan Kumar K, an engineering student navigating through the challenges of college life. Currently
+        studying B.E in Computer Science and Engineering at Shri Madhwa Vadiraja Institute of Technology and
+        Management,Bantakal, I find satisfaction in deciphering complex problems and engaging in hands-on projects.
+        Beyond the technical side, I enjoy drawing,reading, and playing. Open to connecting with fellow students,
+        mentors, or anyone intrigued by the Engineering and Tech world.</p> -->
+        
+    <header>
+        <nav id="main-nav" class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="#">
+                        <img src="./images/logo.png" alt="UniCourt">
+                    </a>
+                    <div class="navbar-burger burger" id="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+    
+                <div id="navbar-example" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a class="navbar-item" href="#">Home</a>
+                        <a class="navbar-item" href="#">Features</a>
+                        <a class="navbar-item" href="#">Industries</a>
+                        <a class="navbar-item" href="#">Pricing</a>
+                        <a class="navbar-item is-active" href="index.html">Blog</a>
+                        <a class="navbar-item" href="#">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <article id="post-1">
+        <div class="post-image">
+            <a href="./single-post.html" title="Lorem ipsum dolor sit amet, co">
+                <img src="./images/post-1.avif" alt="Lorem ipsum dolor sit amet, co" width="868" height="579">
+            </a>
+        </div>
+        <div class="post-content">
+            <div class="post-details">
+                <h2 class="title"><a href="./single-post.html" rel="bookmark">Lorem ipsum dolor sit amet, co</a></h2>
+                <p class="post-meta">
+                    <span class="wrap-posted-on">
+                        By <a href="#">UniCourt</a>
+                        on <time datetime="2022-10-10T05:55:53-08:00">September 20, 2024</time>
+                    </span>
+                </p>
+            </div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum...
+                </p>
+                <a href="./single-post.html" rel="bookmark">Read More...</a>
+            </div>
+        </div>
+    </article>
+<aside id="secondary" class="column">
+    <div id="recent-posts" class="widget">
+        <div class="widget-content">
+            <h3 class="heading">Recent Posts</h3>
+            <ul>
+                <li>
+                    <a href="./single-post.html">Lorem ipsum dolor sit amet, co</a>
+                </li>
+                <li>
+                    <a href="./single-post.html">Lorem ipsum dolor sit amet, consectetuer</a>
+                </li>
+                <li>
+                    <a href="./single-post.html">Lorem ipsum dolor si</a>
+                </li>
+                <li>
+                    <a href="./single-post.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
+                </li>
+                <li>
+                    <a href="./single-post.html">Lorem ipsum dolor sit amet, consectetuer adipiscin</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
+<footer>
+    <div class="container">
+        <div>
+            <nav class="hide-on-signup">
+                <a href="#">Footer link</a>
+                <a href="#">Footer link</a>
+                <a href="#">Footer link</a>
+            </nav>
+        </div>
+        <div class="is-hidden-mobile">
+            <p>
+                © 2024 mysite.com
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="script.js"></script>
 </html>
