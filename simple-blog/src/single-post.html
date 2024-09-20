@@ -1,264 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>HTML & CSS Learning Workshop Blog - Single Blog Post</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-
-    <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --text-color: #333;
-            --background-color: #ecf0f1;
-            --card-background: #fff;
-            --transition-speed: 0.3s;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-            display: flex;
-            gap: 2rem;
-        }
-
-        .main-content {
-            flex: 3;
-        }
-
-        .sidebar {
-            flex: 1;
-        }
-
-        .blog-post,
-        .sidebar>div,
-        .new-post-form {
-            background: var(--card-background);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-        }
-
-        .blog-post:hover,
-        .sidebar>div:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .blog-post h2 {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-
-        .blog-post .meta {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        button,
-        input[type="submit"] {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color var(--transition-speed);
-        }
-
-        button:hover,
-        input[type="submit"]:hover {
-            background-color: var(--secondary-color);
-        }
-
-        .sidebar h3 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .sidebar li {
-            margin-bottom: 0.5rem;
-        }
-
-        .sidebar a {
-            color: var(--text-color);
-            text-decoration: none;
-            transition: color var(--transition-speed);
-        }
-
-        .sidebar a:hover {
-            color: var(--primary-color);
-        }
-
-        .new-post-form {
-            margin-top: 2rem;
-        }
-
-        .new-post-form h2 {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-
-        .new-post-form label {
-            display: block;
-            margin-top: 1rem;
-        }
-
-        .new-post-form input[type="text"],
-        .new-post-form textarea {
-            width: 100%;
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .new-post-form textarea {
-            height: 150px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                order: -1;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <h1>My Enhanced Blog with Posting</h1>
-    </header>
-
-    <div class="container">
-        <main class="main-content">
-            <div id="blog-posts">
-                <article class="blog-post">
-                    <h2>The Art of CSS Styling</h2>
-                    <div class="meta">Posted on May 15, 2023 by Jane Doe</div>
-                    <p>CSS is a powerful tool for web designers. It allows us to transform plain HTML into beautiful,
-                        responsive layouts. In this post, we'll explore some advanced CSS techniques.</p>
-                    <button onclick="likePost(this)">Like</button>
-                    <span class="like-count">0</span>
-                </article>
-                <article class="blog-post">
-                    <h2>JavaScript: The Language of the Web</h2>
-                    <div class="meta">Posted on May 10, 2023 by John Smith</div>
-                    <p>JavaScript has come a long way since its inception. Today, it's an essential part of web
-                        development, powering interactive and dynamic websites.</p>
-                    <button onclick="likePost(this)">Like</button>
-                    <span class="like-count">0</span>
-                </article>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & CSS Learning Workshop Blog - Single Blog Post</title>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+        
+            <style>
+                :root {
+                    --primary-color: #3498db;
+                    --secondary-color: #2c3e50;
+                    --text-color: #333;
+                    --background-color: #ecf0f1;
+                    --card-background: #fff;
+                    --transition-speed: 0.3s;
+                }
+        
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    line-height: 1.6;
+                    margin: 0;
+                    padding: 0;
+                    background-color: var(--background-color);
+                    color: var(--text-color);
+                }
+        
+                header {
+                    background-color: var(--primary-color);
+                    color: white;
+                    text-align: center;
+                    padding: 1rem;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+        
+                header h1 {
+                    margin: 0;
+                    font-size: 2.5rem;
+                }
+        
+                .container {
+                    max-width: 1200px;
+                    margin: 2rem auto;
+                    padding: 0 2rem;
+                    display: flex;
+                    gap: 2rem;
+                }
+        
+                .main-content {
+                    flex: 3;
+                }
+        
+                .sidebar {
+                    flex: 1;
+                }
+        
+                .blog-post, .sidebar > div, .new-post-form {
+                    background: var(--card-background);
+                    padding: 1.5rem;
+                    margin-bottom: 2rem;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+                }
+        
+                .blog-post:hover, .sidebar > div:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+                }
+        
+                .blog-post h2 {
+                    color: var(--primary-color);
+                    margin-top: 0;
+                }
+        
+                .blog-post .meta {
+                    color: #7f8c8d;
+                    font-size: 0.9rem;
+                    margin-bottom: 1rem;
+                }
+        
+                button, input[type="submit"] {
+                    background-color: var(--primary-color);
+                    color: white;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: background-color var(--transition-speed);
+                }
+        
+                button:hover, input[type="submit"]:hover {
+                    background-color: var(--secondary-color);
+                }
+        
+                .sidebar h3 {
+                    color: var(--primary-color);
+                    border-bottom: 2px solid var(--primary-color);
+                    padding-bottom: 0.5rem;
+                }
+        
+                .sidebar ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+        
+                .sidebar li {
+                    margin-bottom: 0.5rem;
+                }
+        
+                .sidebar a {
+                    color: var(--text-color);
+                    text-decoration: none;
+                    transition: color var(--transition-speed);
+                }
+        
+                .sidebar a:hover {
+                    color: var(--primary-color);
+                }
+        
+                .new-post-form {
+                    margin-top: 2rem;
+                }
+        
+                .new-post-form h2 {
+                    color: var(--primary-color);
+                    margin-top: 0;
+                }
+        
+                .new-post-form label {
+                    display: block;
+                    margin-top: 1rem;
+                }
+        
+                .new-post-form input[type="text"],
+                .new-post-form textarea {
+                    width: 100%;
+                    padding: 0.5rem;
+                    margin-top: 0.5rem;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
+        
+                .new-post-form textarea {
+                    height: 150px;
+                }
+        
+                @media (max-width: 768px) {
+                    .container {
+                        flex-direction: column;
+                    }
+        
+                    .sidebar {
+                        order: -1;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>My Enhanced Blog with Posting</h1>
+            </header>
+        
+            <div class="container">
+                <main class="main-content">
+                    <div id="blog-posts">
+                        <article class="blog-post">
+                            <h2>The Art of CSS Styling</h2>
+                            <div class="meta">Posted on May 15, 2023 by Jane Doe</div>
+                            <p>CSS is a powerful tool for web designers. It allows us to transform plain HTML into beautiful, responsive layouts. In this post, we'll explore some advanced CSS techniques.</p>
+                            <button onclick="likePost(this)">Like</button>
+                            <span class="like-count">0</span>
+                        </article>
+                        <article class="blog-post">
+                            <h2>JavaScript: The Language of the Web</h2>
+                            <div class="meta">Posted on May 10, 2023 by John Smith</div>
+                            <p>JavaScript has come a long way since its inception. Today, it's an essential part of web development, powering interactive and dynamic websites.</p>
+                            <button onclick="likePost(this)">Like</button>
+                            <span class="like-count">0</span>
+                        </article>
+                    </div>
+        
+                    <form id="new-post-form" class="new-post-form">
+                        <h2>Create a New Post</h2>
+                        <label for="post-title">Title:</label>
+                        <input type="text" id="post-title" name="title" required>
+                        
+                        <label for="post-author">Author:</label>
+                        <input type="text" id="post-author" name="author" required>
+                        
+                        <label for="post-content">Content:</label>
+                        <textarea id="post-content" name="content" required></textarea>
+                        
+                        <input type="submit" value="Post">
+                    </form>
+                </main>
+        
+                <aside class="sidebar">
+                    <div>
+                        <h3>About</h3>
+                        <p>Welcome to our blog about web development. Here, we share insights, tips, and tricks about HTML, CSS, and JavaScript.</p>
+                    </div>
+                    <div>
+                        <h3>Recent Posts</h3>
+                        <ul id="recent-posts">
+                            <li><a href="#">The Art of CSS Styling</a></li>
+                            <li><a href="#">JavaScript: The Language of the Web</a></li>
+                            <li><a href="#">Responsive Design Principles</a></li>
+                        </ul>
+                    </div>
+                </aside>
             </div>
-
-            <form id="new-post-form" class="new-post-form">
-                <h2>Create a New Post</h2>
-                <label for="post-title">Title:</label>
-                <input type="text" id="post-title" name="title" required>
-
-                <label for="post-author">Author:</label>
-                <input type="text" id="post-author" name="author" required>
-
-                <label for="post-content">Content:</label>
-                <textarea id="post-content" name="content" required></textarea>
-
-                <input type="submit" value="Post">
-            </form>
-        </main>
-
-        <aside class="sidebar">
-            <div>
-                <h3>About</h3>
-                <p>Welcome to our blog about web development. Here, we share insights, tips, and tricks about HTML, CSS,
-                    and JavaScript.</p>
-            </div>
-            <div>
-                <h3>Recent Posts</h3>
-                <ul id="recent-posts">
-                    <li><a href="#">The Art of CSS Styling</a></li>
-                    <li><a href="#">JavaScript: The Language of the Web</a></li>
-                    <li><a href="#">Responsive Design Principles</a></li>
-                </ul>
-            </div>
-        </aside>
-    </div>
-
-    <script>
-        function likePost(button) {
-            let likeCount = button.nextElementSibling;
-            let currentLikes = parseInt(likeCount.innerText);
-            likeCount.innerText = currentLikes + 1;
-        }
-
-        document.getElementById('new-post-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const title = document.getElementById('post-title').value;
-            const author = document.getElementById('post-author').value;
-            const content = document.getElementById('post-content').value;
-
-            const now = new Date();
-            const dateString = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-
-            const newPost = document.createElement('article');
-            newPost.className = 'blog-post';
-            newPost.innerHTML = `
+        
+            <script>
+                function likePost(button) {
+                    let likeCount = button.nextElementSibling;
+                    let currentLikes = parseInt(likeCount.innerText);
+                    likeCount.innerText = currentLikes + 1;
+                }
+        
+                document.getElementById('new-post-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const title = document.getElementById('post-title').value;
+                    const author = document.getElementById('post-author').value;
+                    const content = document.getElementById('post-content').value;
+                    
+                    const now = new Date();
+                    const dateString = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                    
+                    const newPost = document.createElement('article');
+                    newPost.className = 'blog-post';
+                    newPost.innerHTML = `
                         <h2>${title}</h2>
                         <div class="meta">Posted on ${dateString} by ${author}</div>
                         <p>${content}</p>
                         <button onclick="likePost(this)">Like</button>
                         <span class="like-count">0</span>
                     `;
-
-            document.getElementById('blog-posts').prepend(newPost);
-
-            // Add to recent posts
-            const recentPosts = document.getElementById('recent-posts');
-            const newRecentPost = document.createElement('li');
-            newRecentPost.innerHTML = `<a href="#">${title}</a>`;
-            recentPosts.prepend(newRecentPost);
-
-            // Clear form
-            this.reset();
-        });
-    </script>
-</body>
-
-</html>
+                    
+                    document.getElementById('blog-posts').prepend(newPost);
+                    
+                    // Add to recent posts
+                    const recentPosts = document.getElementById('recent-posts');
+                    const newRecentPost = document.createElement('li');
+                    newRecentPost.innerHTML = `<a href="#">${title}</a>`;
+                    recentPosts.prepend(newRecentPost);
+                    
+                    // Clear form
+                    this.reset();
+                });
+            </script>
+        </body>
+        </html>
